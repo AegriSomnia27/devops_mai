@@ -9,7 +9,7 @@ on:
     branches: [main]
     paths:
       - go_rest_api/**
-      
+
 defaults:
   run: 
     working-directory: ./go_rest_api/
@@ -51,3 +51,4 @@ jobs:
 
     - name: Run tests
       run: go test -race -vet=off ./...
+
