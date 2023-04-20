@@ -9,15 +9,15 @@ changelog:
     - title: Breaking Changes 🛠
       labels:
         - Semver-Major
-        - major-change
+        - release:major
     - title: New Features 🎉
       labels:
         - Semver-Minor
-        - minor-change
+        - release:minor
     - title: Small fixes ⚙️
       labels:
         - Semver-Patch
-        - patch
+        - release:patch
     - title: Other Changes
       labels:
         - "*"
