@@ -19,8 +19,6 @@ func helloWorld(w http.ResponseWriter, req *http.Request) {
 	if err != nil {
 		log.Println("something bad happened, send help")
 	}
-
-	return
 }
 
 func destroyAllHumans(w http.ResponseWriter, req *http.Request) {
