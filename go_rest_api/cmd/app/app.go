@@ -26,6 +26,7 @@ func main() {
 
 	log.Println("starting server...")
 
+    // start HTTP server applet
 	server, err := server.StartHTTPServer(appCfg.Host, appCfg.Port)
 	if err != nil {
 		panic(err)

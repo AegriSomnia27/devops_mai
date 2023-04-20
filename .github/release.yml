@@ -1,0 +1,24 @@
+changelog:
+  exclude:
+    labels:
+      - no-release
+    authors:
+      - dependabot
+      - BjarneStroustrup
+  categories:
+    - title: Breaking Changes 🛠
+      labels:
+        - Semver-Major
+        - major-change
+    - title: New Features 🎉
+      labels:
+        - Semver-Minor
+        - minor-change
+    - title: Small fixes ⚙️
+      labels:
+        - Semver-Patch
+        - patch
+    - title: Other Changes
+      labels:
+        - "*"
+
