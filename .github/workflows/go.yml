@@ -6,6 +6,8 @@ name: Go
 on:
   push:
     branches: [ "main", "dev" ]
+    paths:
+      - 'go_rest_api/**'
 
 jobs:
 
