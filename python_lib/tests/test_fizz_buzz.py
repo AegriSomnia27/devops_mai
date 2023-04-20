@@ -20,4 +20,3 @@ def test_fuzz_buzz():
     for _ in range(10):
         assert fuzzbuzz(value) == 'FuzzBuzz'
         value *= 15
-

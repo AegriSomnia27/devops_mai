@@ -10,4 +10,3 @@ def fuzzbuzz(number: int) -> str | None:
 
 
 __all__ = ('fuzzbuzz',)
-
