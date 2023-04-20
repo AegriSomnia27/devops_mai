@@ -1,0 +1,21 @@
+### Build stage ###
+FROM golang:latest AS build
+WORKDIR /app
+COPY . .
+
+RUN go get -d -v ./...
+RUN go install -v ./...
+RUN CGO_ENABLED=0 GOOS=linux go build -a -installsuffix cgo -o ./app ./cmd/go_rest_api/app.go
+
+### Deploy stage ###
+FROM alpine:latest
+RUN mkdir /lib64 && ln -s /lib/libc.musl-x86_64.so.1 /lib64/ld-linux-x86-64.so.2
+
+# install root CAs
+RUN apk --no-cache add ca-certificates
+
+WORKDIR /
+
+COPY --from=build /app/app /app
+
+CMD ["/app"]
