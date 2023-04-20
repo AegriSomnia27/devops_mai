@@ -1,0 +1,11 @@
+version: '3.9'
+services:
+  go_rest_api:
+    build: .
+    container_name: go_rest_api
+    networks:
+      - go_services
+
+networks:
+  go_services:
+    name: go_services
